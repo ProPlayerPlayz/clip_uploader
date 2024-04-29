@@ -66,9 +66,9 @@ https://console.cloud.google.com/
 
 VALID_PRIVACY_STATUSES = ("public", "private", "unlisted")
 # ------------------------------------------------------------------------------------------------
+# Variable Defenition from Google Documentation Code ends here
 
-
-# Code Snippet from Google Documentation which has been modified to fit the program
+# Functions
 # ------------------------------------------------------------------------------------------------
 
 # getting authenticated service without the console part
@@ -123,9 +123,9 @@ def initialize_upload(youtube, file, vidtitle):
     resumable_upload(insert_request)
 
 # ------------------------------------------------------------------------------------------------
+# Custom Functions end
 
-# We adopt the same exponential backoff strategy to resume a 
-# failed upload from the Google Documentation Examples
+# Adopting the Exponential Backoff strategy from the Example Code from Documentation
 # ------------------------------------------------------------------------------------------------
 
 # This method implements an exponential backoff strategy to resume a
@@ -164,9 +164,10 @@ def resumable_upload(insert_request):
       time.sleep(sleep_seconds)
 
 # ------------------------------------------------------------------------------------------------
+# Exponenetial Backoff implementation ends here
 
-# Main Program to check if the video already exists in the channel and then upload it
 
+# Main
 # ------------------------------------------------------------------------------------------------
 
 youtube = get_authenticated_service()
@@ -198,7 +199,7 @@ for filename in os.listdir(path):
         continue
 
 # ------------------------------------------------------------------------------------------------
-# Function Handle to use elsewhere
+# Function Handles to use elsewhere
     
 def authenticate(secrets_file):
     global CLIENT_SECRETS_FILE
